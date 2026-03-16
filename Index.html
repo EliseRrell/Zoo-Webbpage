@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata och länkar till resurser -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Zoo</title>
+    <!-- Webbsidans favicon -->
+    <link rel="icon" type="image/svg+xml" href="Images/Logo.svg">
+    <!-- Huvud-CSS för layout och styling -->
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <!-- SIDANS HEADER: navigering och logotyp -->
+    <div class="header">
+        <div class="header-menu header-menu-left">
+            <h4><a href="#om-oss">Om oss</a></h4>
+            <h4><a href="#vara-djur">Våra djur</a></h4>
+        </div>
+
+        <!-- Logotyp som länkar till toppen av sidan -->
+        <a href="#welcome" class="header-brand">
+            <img src="Images/Logo.svg" alt=" Zoo logga" class="header-logo">
+            <span class="header-title"> Zoo</span>
+        </a>
+
+        <div class="header-menu header-menu-right">
+            <h4><a href="#Tickets">Biljetter</a></h4>
+            <h4><a href="#nyhetsbrev">Nyhetsbrev</a></h4>
+            <h4><a href="#footer">Kontakt</a></h4>
+            <h4>Hitta hit</h4>
+        </div>
+    </div>
+
+    <!-- HUVUDINNEHÅLL -->
+    <div class="main">
+        <!-- Välkomstrubrik -->
+        <h1 id="welcome">Välkommen till Zoo!</h1> 
+
+        <!-- SEktion: Om oss - beskriver parkens syfte och vision -->
+        <section id="om-oss" class="about-us" aria-label="Om Zoo">
+        <h2>Om oss</h2>
+        <p class="about-us-lead"> Zoo är en modern djurpark där lärande, naturvård och upplevelser går hand i hand.</p>
+        <p>Vi arbetar för att skapa en trygg och inspirerande miljö för både djur och besökare. Genom dagliga visningar, pedagogiska aktiviteter och nära möten med djur vill vi väcka nyfikenhet och respekt för naturen.</p>
+        <p>Vår vision är att vara en plats där familjer, skolklasser och djurvänner i alla åldrar kan upptäcka mer om djurens värld och vikten av biologisk mångfald.</p>
+        </section>
+
+        <!-- SEktion: Våra djur - bildspel implementerat med radioknappar och CSS -->
+        <div id="vara-djur">
+        <h2>Våra djur</h2>
+        <div class="animal-slider" aria-label="Våra djur bildspel">
+            <!-- Radioknappar styr vilken slide som visas via CSS (ingen JavaScript krävs) -->
+            <input type="radio" name="animal-slide" id="slide-1" checked>
+            <input type="radio" name="animal-slide" id="slide-2">
+            <input type="radio" name="animal-slide" id="slide-3">
+            <input type="radio" name="animal-slide" id="slide-4">
+            <input type="radio" name="animal-slide" id="slide-5">
+            <input type="radio" name="animal-slide" id="slide-6">
+            <input type="radio" name="animal-slide" id="slide-7">
+
+            <div class="slides">
+                <!-- Varje article är en slide med bild och text -->
+                <article class="slide slide-1">
+                    <div class="slide-media">
+                        <img src="Images/Älg.jpg" alt="Älg" class="slide-image">
+                    </div>
+                    <div class="slide-content">
+                        <h3>Älg</h3>
+                        <p>Älgen är Nordens största hjortdjur och trivs bäst i skog och våtmarker.</p>
+                    </div>
+                </article>
+
+                <article class="slide slide-2">
+                    <div class="slide-media">
+                        <img src="Images/Lejon.jpg" alt="Lejon" class="slide-image">
+                    </div>
+                    <div class="slide-content">
+                        <h3>Lejon</h3>
+                        <p>Lejonet lever ofta i flock och är känt som savannens kraftfulla rovdjur.</p>
+                    </div>
+                </article>
+
+                <article class="slide slide-3">
+                    <div class="slide-media">
+                        <img src="Images/Räv.jpg" alt="Räv" class="slide-image">
+                    </div>
+                    <div class="slide-content">
+                        <h3>Räv</h3>
+                        <p>Räven är ett smart och nyfiket djur med snabbhet och god anpassningsförmåga.</p>
+                    </div>
+                </article>
+
+                <article class="slide slide-4">
+                    <div class="slide-media">
+                        <img src="Images/Sköldpadda.jpg" alt="Sköldpadda" class="slide-image">
+                    </div>
+                    <div class="slide-content">
+                        <h3>Sköldpadda</h3>
+                        <p>Sköldpaddan rör sig lugnt och bär sitt skyddande skal med sig hela livet.</p>
+                    </div>
+                </article>
+
+                <article class="slide slide-5">
+                    <div class="slide-media">
+                        <img src="Images/Säl.jpg" alt="Säl" class="slide-image">
+                    </div>
+                    <div class="slide-content">
+                        <h3>Säl</h3>
+                        <p>Sälen är en skicklig simmare som gärna vilar på klippor mellan sina dyk.</p>
+                    </div>
+                </article>
+
+                <article class="slide slide-6">
+                    <div class="slide-media">
+                        <img src="Images/Björn.png" alt="Björn" class="slide-image">
+                    </div>
+                    <div class="slide-content">
+                        <h3>Björn</h3>
+                        <p>Björnen är ett kraftfullt skogsdjur som gärna söker föda i lugna naturområden.</p>
+                    </div>
+                </article>
+
+                <article class="slide slide-7">
+                    <div class="slide-media">
+                        <img src="Images/Kängru.jpg" alt="Känguru" class="slide-image">
+                    </div>
+                    <div class="slide-content">
+                        <h3>Känguru</h3>
+                        <p>Kängurun är ett starkt pungdjur som tar sig fram med långa och snabba hopp.</p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Navigationskontroller för att hoppa mellan slides -->
+            <div class="slider-controls" aria-label="Navigera i bildspel">
+                <div class="control-set control-1"><label for="slide-7" class="arrow" aria-label="Föregående bild">&#10094;</label><label for="slide-2" class="arrow" aria-label="Nästa bild">&#10095;</label></div>
+                <div class="control-set control-2"><label for="slide-1" class="arrow" aria-label="Föregående bild">&#10094;</label><label for="slide-3" class="arrow" aria-label="Nästa bild">&#10095;</label></div>
+                <div class="control-set control-3"><label for="slide-2" class="arrow" aria-label="Föregående bild">&#10094;</label><label for="slide-4" class="arrow" aria-label="Nästa bild">&#10095;</label></div>
+                <div class="control-set control-4"><label for="slide-3" class="arrow" aria-label="Föregående bild">&#10094;</label><label for="slide-5" class="arrow" aria-label="Nästa bild">&#10095;</label></div>
+                <div class="control-set control-5"><label for="slide-4" class="arrow" aria-label="Föregående bild">&#10094;</label><label for="slide-6" class="arrow" aria-label="Nästa bild">&#10095;</label></div>
+                <div class="control-set control-6"><label for="slide-5" class="arrow" aria-label="Föregående bild">&#10094;</label><label for="slide-7" class="arrow" aria-label="Nästa bild">&#10095;</label></div>
+                <div class="control-set control-7"><label for="slide-6" class="arrow" aria-label="Föregående bild">&#10094;</label><label for="slide-1" class="arrow" aria-label="Nästa bild">&#10095;</label></div>
+            </div>
+
+            <!-- Punkter som visar vilken slide som är aktiv -->
+            <div class="slider-dots" aria-label="Välj bild">
+                <label for="slide-1" class="dot" aria-label="Visa Älg"></label>
+                <label for="slide-2" class="dot" aria-label="Visa Lejon"></label>
+                <label for="slide-3" class="dot" aria-label="Visa Räv"></label>
+                <label for="slide-4" class="dot" aria-label="Visa Sköldpadda"></label>
+                <label for="slide-5" class="dot" aria-label="Visa Säl"></label>
+                <label for="slide-6" class="dot" aria-label="Visa Björn"></label>
+                <label for="slide-7" class="dot" aria-label="Visa Känguru"></label>
+            </div>
+        </div>
+        </div>
+
+        <div class="hours-tickets-layout">
+            <div id="OpeningHours" class="info-card">
+            <h2>Öppettider</h2>
+            <table class="opening-hours" aria-label="Öppettider för Zoo">
+                <tr>
+                    <th>Måndag–Fredag</th>
+                    <td>10:00–18:00</td>
+                </tr>
+                <tr>
+                    <th>Lördag</th>
+                    <td>10:00–20:00</td>
+                </tr>
+                <tr>
+                    <th>Söndag</th>
+                    <td>10:00–16:00</td>
+                </tr>
+            </table>
+            <p class="opening-note">Sista insläpp sker 60 minuter före stängning.</p>
+            </div>
+
+            <div id="Tickets" class="info-card">
+            <h2>Biljetter</h2>
+            <table class="ticket-prices" aria-label="Biljettpriser för Zoo">
+                <tr>
+                    <th>Typ av biljett</th>
+                    <th>Pris</th>
+                </tr>
+                <tr>
+                    <td>Vuxen</td>
+                    <td>150 kr</td>
+                </tr>
+                <tr>
+                    <td>Barn (3-12 år)</td>
+                    <td>75 kr</td>
+                </tr>
+                <tr>
+                    <td>Senior (65+ år)</td>
+                    <td>100 kr</td>
+                </tr>
+                <tr>
+                    <td>Familj (2 vuxna + 2 barn)</td>
+                    <td>350 kr</td>
+                </tr>
+            </table>
+            <p class="ticket-note">Barn under 3 år går in gratis.</p>
+        </div>
+        </div>
+
+        <section id="Information" class="visitor-info" aria-label="Information till besökare">
+        <h2>Information till besökare</h2>
+        <p class="visitor-info-intro">Här hittar du praktisk information om vad som finns inne i parken.</p>
+        <ul class="visitor-info-list">
+            <li>Mat och fika finns vid Savanncaféet och Skogskiosken nära barnområdet.</li>
+            <li>Toaletter, skötrum och vattenstationer finns markerade på parkens karta.</li>
+            <li>Dagens djurmatningar och visningar visas på infotavlor vid entrén.</li>
+            <li>Respektera avspärrningar och mata inte djuren med egen mat.</li>
+        </ul>
+
+        <div class="park-map-wrap">
+            <h3>Hitta hit</h3>
+            <iframe
+                id="parkMap"
+                title="Karta till Zoo"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=18.0186%2C59.3093%2C18.1186%2C59.3493&layer=mapnik&marker=59.3293%2C18.0686"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+        </div>
+        </section>
+
+        <section id="nyhetsbrev" class="newsletter" aria-label="Prenumerera på nyhetsbrev">
+        <h2>Prenumerera på vårt nyhetsbrev</h2>
+        <p class="newsletter-intro">Få nyheter om djur, aktiviteter och erbjudanden direkt till din inkorg.</p>
+
+        <form class="newsletter-form" action="https://http-echo-server.azurewebsites.net" method="post">
+            <div class="form-field">
+                <label for="firstName">Förnamn</label>
+                <input type="text" id="firstName" name="firstName" required minlength="2" autocomplete="given-name">
+            </div>
+
+            <div class="form-field">
+                <label for="lastName">Efternamn</label>
+                <input type="text" id="lastName" name="lastName" required minlength="2" autocomplete="family-name">
+            </div>
+
+            <div class="form-field">
+                <label for="email">Mejladress</label>
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="namn@exempel.se">
+            </div>
+
+            <div class="form-field">
+                <label for="age">Ålder</label>
+                <input type="number" id="age" name="age" required min="1" max="120" inputmode="numeric">
+            </div>
+
+            <button type="submit" class="newsletter-submit">Prenumerera</button>
+        </form>
+        </section>
+        
+        
+    </div>
+
+    <footer id="footer" class="footer">
+        <h3>Kontakt</h3>
+        <p class="footer-lead">Maila oss gärna om du har frågor inför ditt besök.</p>
+        <a class="footer-mail" href="mailto:info@zoo.com?subject=Fråga%20om%20biljetter&body=Hej%20Zoo!%0A%0AJag%20undrar%20om%20ni%20har%20öppet%20på%20lördag.%0A%0AMed%20vänliga%20hälsningar,">info@zoo.com</a>
+        <p class="footer-description">Zoo är en plats där djur och människor kan mötas i harmoni. Vi strävar efter att erbjuda en unik och lärorik upplevelse för alla våra besökare, samtidigt som vi arbetar för att bevara och skydda djurens välbefinnande.</p>
+        <p class="footer-copy">&copy; 2024 Zoo. Alla rättigheter förbehållna.</p>
+    </footer>
+
+</body>
+</html>

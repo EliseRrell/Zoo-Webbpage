@@ -1,0 +1,510 @@
+
+/* Style.css */
+
+/*----Typografi & Bas----*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Nunito:wght@400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+body, p, li {
+  font-family: 'Nunito', Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #2F3A2E;
+  line-height: 1.55;
+  background: linear-gradient(180deg, #f6f8f2 0%, #eef3e7 100%);
+}
+
+html {
+  overflow-x: hidden;
+}
+
+[id] {
+  scroll-margin-top: 78px;
+}
+
+/*----Headern----*/
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  background-color: #A3B18A;
+  color: #2F3A2E;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+}
+
+.header-menu-left {
+  justify-content: flex-start;
+}
+
+.header-menu-right {
+  justify-content: flex-end;
+}
+
+.header h4 {
+  margin: 0;
+  padding: 0 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.header-menu h4 + h4 {
+  border-left: 1px solid rgba(47, 58, 46, 0.35);
+}
+
+.header-brand {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 10px;
+  flex-shrink: 0;
+}
+
+.header-logo {
+  height: 46px;
+  max-height: 80%;
+  width: auto;
+  display: block;
+}
+
+.header-title {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.header a,
+.header a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+a {
+  transition: opacity 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+  opacity: 0.75;
+}
+
+/*----Main-layout----*/
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 18px;
+  padding: 14px;
+}
+
+/*----Sektioner----*/
+.about-us {
+  width: min(900px, 92vw);
+  background-color: rgba(255, 255, 255, 0.82);
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+
+.about-us h2 {
+  margin: 0 0 8px;
+}
+
+.about-us-lead {
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.about-us p {
+  margin: 0;
+}
+
+.about-us p + p {
+  margin-top: 8px;
+}
+
+.visitor-info {
+  width: min(860px, 92vw);
+  background-color: rgba(255, 255, 255, 0.85);
+  border-left: 5px solid #A3B18A;
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.visitor-info h2 {
+  margin: 0 0 8px;
+}
+
+.visitor-info-intro {
+  margin: 0;
+  font-weight: 600;
+}
+
+.visitor-info-list {
+  margin: 10px 0 0;
+  padding-left: 20px;
+}
+
+.visitor-info-list li + li {
+  margin-top: 6px;
+}
+
+.park-map-wrap {
+  margin-top: 14px;
+}
+
+.park-map-wrap h3 {
+  margin: 0 0 8px;
+}
+
+#parkMap {
+  width: 100%;
+  height: 340px;
+  border-radius: 10px;
+  border: 1px solid rgba(47, 58, 46, 0.18);
+}
+
+.park-map-note {
+  margin: 8px 0 0;
+  font-size: 0.92rem;
+  color: rgba(47, 58, 46, 0.8);
+}
+
+.newsletter {
+  width: min(900px, 92vw);
+  background-color: rgba(255, 255, 255, 0.82);
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+
+.newsletter h2 {
+  margin: 0 0 8px;
+}
+
+.newsletter-intro {
+  margin: 0 0 14px;
+}
+
+.newsletter-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field label {
+  font-weight: 600;
+}
+
+.form-field input {
+  border: 1px solid rgba(47, 58, 46, 0.3);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font: inherit;
+  color: #2F3A2E;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.form-field input:focus-visible {
+  outline: 2px solid rgba(47, 58, 46, 0.35);
+  outline-offset: 1px;
+}
+
+.newsletter-submit {
+  grid-column: 1 / -1;
+  justify-self: start;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font: inherit;
+  font-weight: 700;
+  background-color: #A3B18A;
+  color: #2F3A2E;
+  cursor: pointer;
+}
+
+.newsletter-submit:hover,
+.newsletter-submit:focus-visible {
+  opacity: 0.9;
+}
+
+/*----Öppettider & Biljetter----*/
+.hours-tickets-layout {
+  width: min(900px, 92vw);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.info-card {
+  background-color: rgba(255, 255, 255, 0.72);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.info-card h2 {
+  margin: 0 0 10px;
+}
+
+/*----Slider----*/
+.animal-slider {
+  width: min(900px, 92vw);
+  margin-top: 6px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.animal-slider input[type="radio"] {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.slides {
+  position: relative;
+  min-height: 470px;
+}
+
+.slide {
+  display: none;
+  color: #2F3A2E;
+}
+
+#slide-1:checked ~ .slides .slide-1,
+#slide-2:checked ~ .slides .slide-2,
+#slide-3:checked ~ .slides .slide-3,
+#slide-4:checked ~ .slides .slide-4,
+#slide-5:checked ~ .slides .slide-5,
+#slide-6:checked ~ .slides .slide-6,
+#slide-7:checked ~ .slides .slide-7 {
+  display: block;
+}
+
+.slide-media {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slide-content {
+  padding: 10px 14px 12px;
+  text-align: center;
+}
+
+.slide-content h3 {
+  margin: 0 0 8px;
+}
+
+.slide-content p {
+  margin: 0;
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider-controls {
+  min-height: 44px;
+  padding: 0 12px 2px;
+}
+
+.control-set {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px;
+  margin: 0 auto;
+}
+
+#slide-1:checked ~ .slider-controls .control-1,
+#slide-2:checked ~ .slider-controls .control-2,
+#slide-3:checked ~ .slider-controls .control-3,
+#slide-4:checked ~ .slider-controls .control-4,
+#slide-5:checked ~ .slider-controls .control-5,
+#slide-6:checked ~ .slider-controls .control-6,
+#slide-7:checked ~ .slider-controls .control-7 {
+  display: flex;
+}
+
+.arrow {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(47, 58, 46, 0.45);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+}
+
+.arrow:hover,
+.arrow:focus-visible {
+  opacity: 1;
+  background-color: rgba(47, 58, 46, 0.85);
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 0 12px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(47, 58, 46, 0.35);
+  cursor: pointer;
+}
+
+#slide-1:checked ~ .slider-dots label[for="slide-1"],
+#slide-2:checked ~ .slider-dots label[for="slide-2"],
+#slide-3:checked ~ .slider-dots label[for="slide-3"],
+#slide-4:checked ~ .slider-dots label[for="slide-4"],
+#slide-5:checked ~ .slider-dots label[for="slide-5"],
+#slide-6:checked ~ .slider-dots label[for="slide-6"],
+#slide-7:checked ~ .slider-dots label[for="slide-7"] {
+  background-color: rgba(47, 58, 46, 0.9);
+}
+
+/*----Tabeller----*/
+.opening-hours,
+.ticket-prices {
+  border-collapse: collapse;
+  min-width: min(420px, 92vw);
+  background-color: rgba(255, 255, 255, 0.78);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.opening-hours th,
+.opening-hours td,
+.ticket-prices th,
+.ticket-prices td {
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid rgba(47, 58, 46, 0.15);
+}
+
+.opening-hours th,
+.ticket-prices th {
+  font-weight: 700;
+}
+
+.opening-hours tr:last-child th,
+.opening-hours tr:last-child td,
+.ticket-prices tr:last-child th,
+.ticket-prices tr:last-child td {
+  border-bottom: none;
+}
+
+.opening-note,
+.ticket-note {
+  margin: 10px 0 0;
+  font-size: 0.95rem;
+  color: rgba(47, 58, 46, 0.85);
+}
+
+@media (max-width: 880px) {
+  .hours-tickets-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*----Footer----*/
+.footer {
+  background-color: #A3B18A;
+  color: #2F3A2E;
+  text-align: center;
+  padding: 28px 20px 22px;
+}
+
+.footer h3 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.footer-lead {
+  margin: 10px 0 8px;
+  font-weight: 500;
+}
+
+.footer-mail,
+.footer-mail:visited {
+  display: inline-block;
+  color: #2F3A2E;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(47, 58, 46, 0.45);
+  padding-bottom: 2px;
+}
+
+.footer-mail:hover,
+.footer-mail:focus-visible {
+  opacity: 1;
+  border-bottom-color: rgba(47, 58, 46, 0.95);
+}
+
+.footer-description {
+  max-width: 72ch;
+  margin: 16px auto 0;
+  line-height: 1.6;
+}
+
+.footer-copy {
+  margin: 16px 0 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
